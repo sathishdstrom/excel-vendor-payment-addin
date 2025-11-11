@@ -53,7 +53,8 @@ npm start
 
 ✅ Default URL:
 
-http://localhost:3000
+http://localhost:8080
+
 
 4️⃣ Expose the Server using ngrok
 
@@ -61,15 +62,7 @@ Since Excel add-ins require HTTPS, use ngrok to tunnel your local server.
 
 Run this in a new terminal:
 
-ngrok http 3000
-
-4️⃣ Expose the Server using ngrok
-
-Since Excel add-ins require HTTPS, use ngrok to tunnel your local server.
-
-Run this in a new terminal:
-
-ngrok http 3000
+ngrok http https://localhost:8080
 
 6️⃣ Sideload the Add-in into Excel
 🪟 Excel Desktop
@@ -108,7 +101,7 @@ npx webpack --mode development
 npm start
 
 # Expose HTTPS tunnel
-ngrok http 3000
+ngrok http 8080
 
 # Build for production
 npx webpack --mode production
