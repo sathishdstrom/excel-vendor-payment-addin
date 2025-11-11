@@ -1,0 +1,149 @@
+/* General Layout */
+body {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 13px;
+    padding: 16px;
+    background-color: #ffffff;
+    color: #222;
+    margin: 0;
+}
+
+/* Headings */
+h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 14px;
+    margin-top: 16px;
+    margin-bottom: 6px;
+}
+
+/* Input Fields and Dropdowns */
+input,
+select {
+    width: 95%;
+    max-width: 260px;
+    padding: 5px 6px;
+    font-size: 12.5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+button {
+    padding: 6px 12px;
+    font-size: 12.5px;
+    border: none;
+    border-radius: 3px;
+    background-color: #0078d4;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 4px;
+    margin-right: 4px;
+}
+
+button:hover {
+    background-color: #005a9e;
+}
+
+/* Special Logout button */
+#logout-btn {
+    background-color: #c50f1f;
+}
+
+#logout-btn:hover {
+    background-color: #a80000;
+}
+
+/* Status / Notification */
+#status {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #107c10; /* green for success */
+}
+
+/* Vendor History Table */
+#vendor-history {
+    margin-top: 10px;
+    overflow-x: auto;
+    max-height: 200px;
+    border-top: 1px solid #ccc;
+    padding-top: 6px;
+    font-size: 12px;
+}
+
+#vendor-history table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+}
+
+#vendor-history th,
+#vendor-history td {
+    border: 1px solid #ddd;
+    padding: 4px 6px;
+    text-align: left;
+}
+
+#vendor-history th {
+    background-color: #f3f3f3;
+}
+
+/* Separator */
+hr {
+    margin: 14px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* -----------------------------
+   Dark Mode (Office theme aware)
+------------------------------ */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e1e;
+        color: #f3f3f3;
+    }
+
+    input,
+    select {
+        background-color: #2d2d2d;
+        color: #f3f3f3;
+        border: 1px solid #555;
+    }
+
+    button {
+        background-color: #3794ff;
+        color: #fff;
+    }
+
+    button:hover {
+        background-color: #2a7cd4;
+    }
+
+    #vendor-history th {
+        background-color: #333;
+    }
+
+    #vendor-history td {
+        border-color: #444;
+    }
+
+    hr {
+        border-top: 1px solid #444;
+    }
+
+    #logout-btn {
+        background-color: #a80000;
+    }
+
+    #logout-btn:hover {
+        background-color: #c50f1f;
+    }
+}

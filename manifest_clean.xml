@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+           xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+           xsi:type="TaskPaneApp">
+
+    <Id>3b6b07b0-1f23-4bda-8e82-91c7f28a9b17</Id>
+    <Version>1.0.0.0</Version>
+    <ProviderName>ConstructionFinance</ProviderName>
+    <DefaultLocale>en-US</DefaultLocale>
+
+    <DisplayName DefaultValue="Vendor Payment Manager"/>
+    <Description DefaultValue="Manage vendor payments, simulate account balances, and generate Excel reports."/>
+
+    <IconUrl DefaultValue="https://endorsable-claude-serologically.ngrok-free.dev/assets/icon.png"/>
+    <HighResolutionIconUrl DefaultValue="https://endorsable-claude-serologically.ngrok-free.dev/assets/icon.png"/>
+    <SupportUrl DefaultValue="https://endorsable-claude-serologically.ngrok-free.dev"/>
+
+    <Hosts>
+        <Host Name="Workbook"/>
+    </Hosts>
+
+    <DefaultSettings>
+        <SourceLocation DefaultValue="https://endorsable-claude-serologically.ngrok-free.dev/index.html"/>
+    </DefaultSettings>
+
+    <Permissions>ReadWriteDocument</Permissions>
+
+    <!-- ✅ Compliant VersionOverrides -->
+    <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+                      xsi:type="VersionOverridesV1_0">
+        <Hosts>
+            <Host xsi:type="Workbook">
+                <DesktopFormFactor>
+                    <FunctionFile resid="Taskpane.Url"/>
+
+                    <ExtensionPoint xsi:type="PrimaryCommandSurface">
+                        <OfficeTab id="TabHome">
+                            <Group id="VendorPaymentGroup">
+                                <Label resid="VendorPaymentGroup.Label"/>
+                                <Icon>
+                                    <bt:Image size="32" resid="Icon.32x32"/>
+                                </Icon>
+                                <Control xsi:type="Button" id="ShowTaskPaneButton">
+                                    <Label resid="TaskpaneButton.Label"/>
+                                    <Supertip>
+                                        <Title resid="TaskpaneButton.Label"/>
+                                        <Description resid="TaskpaneButton.Tooltip"/>
+                                    </Supertip>
+                                    <Icon>
+                                        <bt:Image size="32" resid="Icon.32x32"/>
+                                    </Icon>
+                                    <Action xsi:type="ShowTaskpane">
+                                        <SourceLocation resid="Taskpane.Url"/>
+                                    </Action>
+                                </Control>
+                            </Group>
+                        </OfficeTab>
+                    </ExtensionPoint>
+                </DesktopFormFactor>
+            </Host>
+        </Hosts>
+
+        <Resources>
+            <bt:Images>
+                <bt:Image id="Icon.32x32"
+                          DefaultValue="https://endorsable-claude-serologically.ngrok-free.dev/assets/icon.png"/>
+            </bt:Images>
+            <bt:Urls>
+                <bt:Url id="Taskpane.Url"
+                        DefaultValue="https://endorsable-claude-serologically.ngrok-free.dev/index.html"/>
+            </bt:Urls>
+            <bt:ShortStrings>
+                <bt:String id="VendorPaymentGroup.Label" DefaultValue="Vendor Manager"/>
+                <bt:String id="TaskpaneButton.Label" DefaultValue="Open Manager"/>
+            </bt:ShortStrings>
+            <bt:LongStrings>
+                <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Open the Vendor Payment Manager taskpane."/>
+            </bt:LongStrings>
+        </Resources>
+    </VersionOverrides>
+</OfficeApp>

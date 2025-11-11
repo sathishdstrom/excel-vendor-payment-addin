@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vendor Payment Manager</title>
+
+    <!-- Office.js -->
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+<h2>Vendor Payment Manager</h2>
+<div id="status" style="color:green;"></div>
+
+<!-- Login Section -->
+<div id="login-section">
+    <h3>Login</h3>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button id="login-btn">Login</button>
+</div>
+
+<!-- Main Section (hidden until login) -->
+<div id="main-section" style="display:none;">
+    <h3>Welcome!</h3>
+
+    <!-- Add Vendor -->
+    <div>
+        <label>Add Vendor:</label>
+        <input type="text" id="vendor-name" placeholder="Vendor Name" />
+        <select id="account-select">
+            <option value="A">Account A</option>
+            <option value="B">Account B</option>
+        </select>
+        <button id="add-vendor-btn">Add Vendor</button>
+    </div>
+
+    <!-- Make Payment -->
+    <div>
+        <label>Make Payment:</label>
+        <select id="vendor-select"></select>
+        <input type="number" id="payment-amount" placeholder="Amount" />
+        <button id="pay-btn">Pay</button>
+    </div>
+
+    <!-- Vendor History -->
+    <div>
+        <label>Vendor History:</label>
+        <select id="history-vendor-select"></select>
+        <button id="view-history-btn">View</button>
+    </div>
+
+    <!-- ✅ History output area -->
+    <div id="vendor-history"></div>
+
+    <hr />
+
+    <!-- Actions -->
+    <button id="report-btn">Generate Report</button>
+    <button id="clear-data-btn">Clear Data</button>
+    <button id="logout-btn" style="background-color:#c50f1f;">Logout</button>
+</div>
+
+<!-- Bundle -->
+<script src="bundle.js?v=10"></script>
+</body>
+</html>
