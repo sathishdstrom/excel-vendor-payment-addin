@@ -77,17 +77,17 @@ Browse to and select manifest.xml.
 
 Visit Excel for the web.
 
-# Open a new workbook.
+ Open a new workbook.
 
-# Go to Insert → Office Add-ins → Upload My Add-in → Browse.
+ Go to Insert → Office Add-ins → Upload My Add-in → Browse.
 
-# Select your manifest.xml.
+ Select your manifest.xml.
 
-# Your add-in will appear as a taskpane on the right side of Excel.
+ Your add-in will appear as a taskpane on the right side of Excel.
 
-#  ️⃣ (Optional) Production Build
+  ️⃣ (Optional) Production Build
 
-# To generate an optimized bundle for deployment:
+ To generate an optimized bundle for deployment:
 
 npx webpack --mode development
 
