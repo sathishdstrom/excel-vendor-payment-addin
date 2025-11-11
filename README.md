@@ -18,7 +18,7 @@ Built using **TypeScript**, **Office.js**, **Webpack**, and local testing via **
 
 ---
 
-## 🔐 Admin Login Details
+## 🔐 Login Details
 
 | Username | Password |
 |-----------|-----------|
